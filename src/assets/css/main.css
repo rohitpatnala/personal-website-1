@@ -6,8 +6,10 @@ html {
 
 section {
   scroll-snap-align: start;
-  scroll-margin-top: 0;
+  scroll-margin-top: 100px;
   position: relative;
+  min-height: 100vh;
+  /* especially for hero */
 }
 
 html,

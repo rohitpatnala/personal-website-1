@@ -94,3 +94,11 @@
     color: #149ddd !important;
     /* accent color for active icon */
 }
+
+.nav-link.disabled {
+    pointer-events: none;
+    /* disables clicks */
+    opacity: 0.4;
+    /* makes it look grayed out */
+    cursor: not-allowed;
+}

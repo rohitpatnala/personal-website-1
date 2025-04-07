@@ -1,5 +1,5 @@
-import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/Sidebar.css";
 
 const sectionIds = [
@@ -18,8 +18,7 @@ const Sidebar = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-40% 0px -50% 0px",
-      threshold: 0.1,
+      threshold: 0.5, // 50% of the section must be visible
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -34,9 +33,10 @@ const Sidebar = () => {
       observerCallback,
       observerOptions
     );
+
     sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
     });
 
     return () => observer.disconnect();
@@ -51,21 +51,21 @@ const Sidebar = () => {
         <div className="profile">
           <img
             src="/images/Rohit.jpeg"
-            alt=""
+            alt="Rohit Patnala"
             className="img-fluid rounded-circle"
           />
           <h1 className="text-light title">
-            <NavLink to="/">Rohit Patnala</NavLink>
+            <a href="#hero">Rohit Patnala</a>
           </h1>
           <div className="social-links mt-3 text-center">
             <a href="#" className="facebook">
-              <i className="bi bi-facebook"></i>
+              <i className="bi bi-facebook" />
             </a>
             <a href="#" className="instagram">
-              <i className="bi bi-instagram"></i>
+              <i className="bi bi-instagram" />
             </a>
             <a href="#" className="linkedin">
-              <i className="bi bi-linkedin"></i>
+              <i className="bi bi-linkedin" />
             </a>
           </div>
         </div>
@@ -74,40 +74,34 @@ const Sidebar = () => {
           <ul>
             <li>
               <a href="#hero" className={`nav-link ${isActive("hero")}`}>
-                <i className="bi bi-house"></i> Home
+                <i className="bi bi-house" /> Home
               </a>
             </li>
             <li>
               <a href="#about" className={`nav-link ${isActive("about")}`}>
-                <i className="bi bi-person"></i> About
+                <i className="bi bi-person" /> About
               </a>
             </li>
             <li>
               <a href="#resume" className={`nav-link ${isActive("resume")}`}>
-                <i className="bi bi-file-earmark"></i> Resume
-              </a>
-            </li>
-            {/* <li>
-              <a
-                href="#coursework"
-                className={`nav-link ${isActive("coursework")}`}
-              >
-                <i className="bi bi-journal-code"></i> Coursework
+                <i className="bi bi-file-earmark" /> Resume
               </a>
             </li>
             <li>
-              <a
-                href="#portfolio"
-                className={`nav-link ${isActive("portfolio")}`}
-              >
-                <i className="bi bi-images"></i> Portfolio
+              <a className="nav-link disabled">
+                <i className="bi bi-journal-code" /> Coursework
               </a>
             </li>
             <li>
-              <a href="#contact" className={`nav-link ${isActive("contact")}`}>
-                <i className="bi bi-envelope"></i> Contact
+              <a className="nav-link disabled">
+                <i className="bi bi-images" /> Portfolio
               </a>
-            </li> */}
+            </li>
+            <li>
+              <a className="nav-link disabled">
+                <i className="bi bi-envelope" /> Contact
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
