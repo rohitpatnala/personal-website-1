@@ -1,0 +1,96 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 100vh;
+    background: #040b14;
+    overflow-y: auto;
+    transition: all ease-in-out 0.3s;
+    z-index: 9997;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.profile {
+    padding: 15px;
+    text-align: center;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border: 8px solid #2c2f3f;
+    margin: 15px auto;
+    display: block;
+}
+
+.profile h1 a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile .social-links a {
+    background: #212431;
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+.profile .social-links a:hover {
+    background: #149ddd;
+}
+
+.nav-menu {
+    padding: 30px 0;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-menu a i {
+    font-size: 20px;
+    padding-right: 8px;
+    color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active {
+    color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i {
+    color: #149ddd;
+}
+
+.nav-menu .active,
+.nav-menu .active:focus {
+    color: #fff !important;
+    /* bright white color for active text */
+}
+
+.nav-menu .active i,
+.nav-menu .active:focus i {
+    color: #149ddd !important;
+    /* accent color for active icon */
+}

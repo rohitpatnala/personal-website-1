@@ -1,0 +1,203 @@
+.about {
+    padding: 80px 0;
+    min-height: 100vh;
+    width: 81%;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Image + content layout */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.col-left {
+    flex: 0 0 280px;
+    max-width: 280px;
+}
+
+.col-right {
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%;
+    /* Add this */
+    overflow-wrap: break-word;
+    /* Breaks long text */
+}
+
+
+.profile-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+/* Text under image section */
+.col-right h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.fst-italic {
+    font-style: italic;
+    margin: 10px 0 20px;
+}
+
+.info-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    min-width: 250px;
+}
+
+.info-grid li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+    /* Add this */
+    word-break: break-word;
+    /* And this */
+}
+
+.info-grid li i {
+    color: var(--accent-color);
+    font-size: 16px;
+    line-height: 1;
+}
+
+.info-grid li span,
+.info-grid li a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+}
+
+/* Summary paragraph */
+.about-summary {
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    /* keeps them side by side */
+    gap: 30px;
+    /* reduce this to your liking */
+    flex-wrap: wrap;
+}
+
+.info-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 48%;
+    /* 👈🏼 forces each ul to take 48% width = tighter columns */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .col-left {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .info-grid {
+        flex-direction: column;
+    }
+}
+
+/* Experience counters */
+
+.experience-counters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.counter-box {
+    flex: 1 1 200px;
+    max-width: 240px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.counter-box i {
+    font-size: 36px;
+    color: #149ddd;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.counter-box span,
+.counter-box .countup {
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.counter-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .experience-counters {
+        flex-direction: column;
+        align-items: center;
+    }
+}

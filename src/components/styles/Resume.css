@@ -1,0 +1,143 @@
+.resume {
+    padding: 40px 0 80px;
+}
+
+.resume-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.resume-left,
+.resume-right {
+    flex: 0 0 50%;
+    max-width: 40%;
+}
+
+@media (max-width: 768px) {
+
+    .resume-left,
+    .resume-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.resume-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 18px;
+    border-left: 2px solid #149ddd;
+}
+
+.resume-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 40px;
+    border-left: 2px solid #d3d3d3;
+}
+
+.resume-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    /* aligns dot with the border */
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: #149ddd;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.resume-item:last-child {
+    margin-bottom: 0;
+    border-left: 2px solid transparent;
+    /* stops line */
+}
+
+.resume-item h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resume-item h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.resume-date {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.resume-item ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.resume-item ul li {
+    margin-bottom: 6px;
+}
+
+.resume-link {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #149ddd;
+}
+
+.resume-link a {
+    color: #149ddd;
+    text-decoration: underline;
+}
+
+.resume-left .resume-item,
+.resume-right .resume-item {
+    min-height: 120px;
+    /* or whatever height works best visually */
+}
+
+.resume-button {
+    display: inline-block;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 40%;
+    padding: 10px 20px;
+    background-color: #149ddd;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #089206;
+    text-decoration: none;
+    color: #fff;
+}
+
+.resume-button:hover .resume-icon {
+    transform: translateX(4px) translateY(-2px);
+}
+
+.resume-icon {
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-columns {
+        flex-direction: column;
+    }
+}

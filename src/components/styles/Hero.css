@@ -1,0 +1,64 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("/images/Dehradun.jpg") no-repeat center center;
+    background-size: cover;
+    background-position: 300% center;
+    /* to shift the image slightly to the right */
+    position: relative;
+    color: #fff;
+    /* background-size: cover; */
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+#hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero-container {
+    position: absolute;
+    top: 50%;
+    /* Vertically center */
+    left: 50px;
+    /* Adjust horizontally beside sidebar (increase if needed) */
+    transform: translateY(-50%);
+    z-index: 2;
+    min-width: 300px;
+    text-align: left;
+    /* Align text to left for better alignment */
+}
+
+.hero-container h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-container p {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.hero-container p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+}
+
+@media (max-width: 991px) {
+    #hero {
+        width: 100%;
+        margin-left: 0;
+    }
+}

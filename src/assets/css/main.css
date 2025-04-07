@@ -1,0 +1,65 @@
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-left: 300px;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 0;
+  position: relative;
+}
+
+html,
+body,
+#root,
+.app-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+}
+
+.main-content {
+  flex-grow: 1;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  margin-left: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+  scroll-padding-left: 300px;
+  /* for sidebar */
+}
+
+
+#header {
+  width: 300px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #040b14;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+
+.main-content .container {
+  max-width: 100%;
+  /* expands the container to full width of the main content */
+  padding-left: 50px;
+  /* slight spacing from sidebar */
+  padding-right: 50px;
+  /* maintains uniform spacing */
+}
