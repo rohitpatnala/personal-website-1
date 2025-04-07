@@ -3,12 +3,11 @@
     height: 100vh;
     background: url("/images/Dehradun.jpg") no-repeat center center;
     background-size: cover;
-    background-position: 1000% center;
+    background-position: 300% center;
     /* to shift the image slightly to the right */
     position: relative;
     color: #fff;
-    /* background-size: cover; */
-    /* position: relative; */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
